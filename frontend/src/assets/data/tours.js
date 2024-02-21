@@ -11,6 +11,7 @@ const tours = [
     id: "01",
     title: "Westminister Bridge",
     city: "London",
+    address: "Somewhere on the earth!",
     distance: 300,
     price: 99,
     maxGroupSize: 10,
@@ -33,6 +34,8 @@ const tours = [
     price: 99,
     maxGroupSize: 8,
     desc: "this is the description",
+    address: "Somewhere on the earth!",
+
     reviews: [
       {
         name: "jhon doe",
@@ -51,6 +54,9 @@ const tours = [
     price: 99,
     maxGroupSize: 8,
     desc: "this is the description",
+
+    address: "Somewhere on the earth!",
+
     reviews: [
       {
         name: "jhon doe",
@@ -65,6 +71,8 @@ const tours = [
     id: "04",
     title: "Beautiful Sunrise, Thailand",
     city: "Thailand",
+    address: "Somewhere on the earth!",
+
     distance: 500,
     price: 99,
     maxGroupSize: 8,
@@ -88,6 +96,8 @@ const tours = [
     title: "Nusa Pendia Bali, Indonesia",
     city: "Indonesia",
     distance: 500,
+    address: "Somewhere on the earth!",
+
     price: 99,
     maxGroupSize: 8,
     desc: "this is the description",

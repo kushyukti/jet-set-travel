@@ -121,8 +121,8 @@ const Footer = () => {
 
           <Col lg="12" className="text-center pt-5">
             <p className="copyright">
-              Copyright {year}, design and develop by JETSETTEAM with ❤ . All
-              Rights are reserved.
+              Copyright@{year}, designed and developed by JetSetTeam with ❤ .
+              All Rights are reserved.
             </p>
           </Col>
         </Row>
