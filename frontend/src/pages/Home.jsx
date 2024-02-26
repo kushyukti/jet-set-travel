@@ -81,7 +81,7 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      {/* -----------------------------------hero section ends */}
+      {/* -----------------------------------hero section ends------------------------------------------ */}
 
       <section>
         <Container>
@@ -95,7 +95,7 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* =====================================featured tour section start */}
+      {/* =====================================featured tour section start-------------------------------------- */}
 
       <section>
         <Container>
@@ -108,9 +108,9 @@ const Home = () => {
           </Row>
         </Container>
       </section>
-      {/* =====================================featured tour section end */}
+      {/* =====================================featured tour section end -----------------------------------------*/}
 
-      {/* =========================experience section start ================ = */}
+      {/* =========================experience section start ================ =-------------------------------- */}
 
       <section>
         <Container>

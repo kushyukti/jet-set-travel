@@ -2,20 +2,28 @@ import React, { useEffect, useState } from "react";
 import CommonSection from "../shared/CommonSection";
 import "../styles/tour.css";
 import TourCard from "../../src/shared/TourCard";
-import tourData from "../assets/data/tours";
+// import tourData from "../assets/data/tours";
 import SearchBar from "./../shared/SearchBar";
 import Newsletter from "./../shared/Newsletter";
 import { Col, Container, Row } from "reactstrap";
+import useFetch from "../hooks/useFetch";
+import { BASE_URL } from "../utils/config";
 
 const Tours = () => {
+  const {
+    data: allTours,
+    loading,
+    error,
+  } = useFetch(`${BASE_URL}tour/getAllTour`);
+
   const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(0);
-  console.log(pageCount, page, "dasf");
+  // console.log(pageCount, page, "dasf");
 
-  useEffect(() => {
-    const pages = Math.ceil(5 / 4);
-    setPageCount(pages);
-  }, [page]);
+  // useEffect(() => {
+  //   const pages = Math.ceil(5 / 4);
+  //   setPageCount(pages);
+  // }, [page]);
   return (
     <>
       <CommonSection title={"All Tours"} />
@@ -31,8 +39,8 @@ const Tours = () => {
       <section className="pt-0">
         <Container>
           <Row>
-            {tourData?.map((tour) => (
-              <Col lg="3" className="mb-5" key={tour.id}>
+            {allTours?.map((tour) => (
+              <Col lg="3" className="mb-5" key={tour._id}>
                 <TourCard tour={tour} />
               </Col>
             ))}

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import moment from "moment-timezone";
 
 const bookingSchema = new mongoose.Schema({
   productId: {
@@ -6,7 +7,7 @@ const bookingSchema = new mongoose.Schema({
     ref: "Tour",
   },
   userId: {
-    type: String,
+    type: mongoose.Types.ObjectId,
     required: true,
   },
   userEmail: {
@@ -14,7 +15,6 @@ const bookingSchema = new mongoose.Schema({
   },
   fullName: {
     type: String,
-    required: true,
   },
   guestSize: {
     type: Number,
@@ -26,7 +26,7 @@ const bookingSchema = new mongoose.Schema({
   },
   bookAt: {
     type: Date,
-    required: true,
+    default: () => moment().tz("Asia/Kolkata").format(), // Set default value to current date
   },
   tourName: {
     type: String,

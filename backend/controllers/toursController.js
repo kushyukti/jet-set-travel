@@ -109,7 +109,7 @@ export const getAllTourController = async (req, res) => {
   const page = parseInt(req.query.page);
   try {
     const getAllTour = await Tour.find().populate("reviews");
-    // .skip(page * 8)
+    // .skip(page * 5)
     // .limit(5);
     res.status(200).send({
       success: true,
@@ -129,14 +129,14 @@ export const getAllTourController = async (req, res) => {
 export const getTourBySearchController = async (req, res) => {
   const city = new RegExp(req.query.city, "i"); // here i means case sensitive
 
-  const distance = new RegExp(req.query.distance);
+  // const distance = new RegExp(req.query.distance);
   const maxGroupSize = parseInt(req.query.maxGroupSize);
 
   try {
     // get means greateer than equal
     const tours = await Tour.find({
       city,
-      distance,
+      // distance
       maxGroupSize: { $gte: maxGroupSize },
     }).populate("reviews");
 

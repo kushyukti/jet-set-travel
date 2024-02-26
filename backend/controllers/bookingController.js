@@ -1,9 +1,10 @@
 import Booking from "../models/Booking.js";
 
 // POST NEW BOOKING
-export default createBooking = async (req, res) => {
+export const createBooking = async (req, res) => {
   const newBooking = new Booking(req.body);
   try {
+    console.log(req.body);
     const savedBooking = await newBooking.save();
     res.status(200).json({
       success: true,
@@ -14,6 +15,7 @@ export default createBooking = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Not Booked! Please try again!",
+      error: err,
     });
   }
 };
